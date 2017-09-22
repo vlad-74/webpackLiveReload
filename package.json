@@ -1,0 +1,47 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "error": "webpack --display-error-details",
+    "info": "webpack --display-modules",
+    "infov": "webpack --display-modules –v",
+    "time": "webpack --profile --display-modules",
+    "timev": "webpack --profile --display-modules --display-reasons",
+    "devser": "set NODE_ENV=devser&set NODE_ARCH=0&webpack-dev-server --inline --hot",
+    "testser": "set NODE_ENV=testser&set NODE_ARCH=0&webpack&node server.js",
+    "prod": "set NODE_ENV=prod&set NODE_ARCH=1&webpack&node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assets-webpack-plugin": "^3.5.1",
+    "autoprefixer-loader": "^3.1.0",
+    "babel": "^6.0.15",
+    "babel-core": "^6.0.14",
+    "babel-loader": "^6.0.0",
+    "bundle-loader": "^0.5.5",
+    "babel-preset-es2015": "^6.0.14",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.21.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^2.30.1",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.7.1",
+    "node-static": "^0.7.7",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.14",
+    "babel-loader": "^6.0.0",
+    "babel-preset-es2015": "^6.0.14"
+  }
+}
