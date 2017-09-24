@@ -28,7 +28,7 @@ dependencies":<br />
 
 # npm run devser       -- http://localhost:8080/webpack-dev-server
 # npm run testser      -- http://127.0.0.1:3000/
-# npm run prod         -- http://127.0.0.1:3000/ + АРХИВАЦИЯ frontend В old_frontend!!!
+# npm run archive         -- http://127.0.0.1:3000/ + АРХИВАЦИЯ frontend В frontend_archive!!!
 
 scripts в package.json:<br />
 1. "error": "webpack --display-error-details",
@@ -38,7 +38,7 @@ scripts в package.json:<br />
 5. "timev": "webpack --profile --display-modules --display-reasons",
 6. "devser": "set NODE_ENV=devser&set NODE_ARCH=0&webpack-dev-server --inline --hot",
 7. "testser": "set NODE_ENV=testser&set NODE_ARCH=0&webpack&node server.js",
-8. "prod": "set NODE_ENV=prod&set NODE_ARCH=1&webpack&node server.js"
+8. "archive": "set NODE_ENV=archive&set NODE_ARCH=1&webpack&node server.js"
 
 Плагины:
 1. NoErrorsPlugin – не добавляет в сборку файлы с ошибками
