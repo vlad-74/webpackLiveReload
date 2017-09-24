@@ -1,14 +1,15 @@
 # Webpack для SPA сайта :<br />
 npm i :Импортировать необходимые модули.Зависимости указаны в файле package.json
 
-dependencies":<br />
+"dependencies": {<br />
     "assets-webpack-plugin": "^3.5.1",<br />
     "autoprefixer-loader": "^3.1.0",<br />
     "babel": "^6.0.15",<br />
     "babel-core": "^6.0.14",<br />
     "babel-loader": "^6.0.0",<br />
-    "bundle-loader": "^0.5.5",<br />
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.0.14",<br />
     "babel-preset-es2015": "^6.0.14",<br />
+    "bundle-loader": "^0.5.5",<br />
     "copy-webpack-plugin": "^4.0.1",<br />
     "css-loader": "^0.21.0",<br />
     "extract-text-webpack-plugin": "^0.8.2",<br />
@@ -22,7 +23,7 @@ dependencies":<br />
     "stylus-loader": "^1.4.0",<br />
     "url-loader": "^0.5.6",<br />
     "webpack": "^1.12.2",<br />
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1"<br />
 
 # !!!!!!!!!!ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!!!!!!!!!!
 
