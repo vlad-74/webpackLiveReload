@@ -26,7 +26,7 @@ dependencies":<br />
 
 # !!!!!!!!!!ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!!!!!!!!!!
 
-# npm run devser       -- http://localhost:8080/webpack-dev-server
+# npm run devser       -- http://localhost:8080/webpack-dev-server/
 # npm run testser      -- http://127.0.0.1:3000/
 # npm run archive         -- http://127.0.0.1:3000/ + АРХИВАЦИЯ frontend В frontend_archive!!!
 

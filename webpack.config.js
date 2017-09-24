@@ -11,8 +11,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');//КОПИРУЕТ ФАЙЛЫ 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");//СОЗДАЕТ CSS ФАЙЛ
 
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
 const titleHTML = 'ЗАГОЛОВОК';
 let t = Date.parse(new Date()); //milliseconds
 
@@ -117,7 +115,6 @@ if (NODE_ENV == 'devser') {
       filename: "[name][hash].js"
     },
     plugins: [
-      // new UglifyJSPlugin(),
       new CopyWebpackPlugin([
         { from: __dirname + '/frontend', to: __dirname + '/frontend_archive/'+ t +'/' }
       ])
