@@ -11,6 +11,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');//КОПИРУЕТ ФАЙЛЫ 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");//СОЗДАЕТ CSS ФАЙЛ
 
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 const titleHTML = 'ЗАГОЛОВОК';
 let t = Date.parse(new Date()); //milliseconds
 
@@ -54,7 +56,7 @@ if (NODE_ENV == 'devser') {
       hot: true
     }
   };
-}else{
+}else if (NODE_ENV == 'testser'){
   module.exports = {
     context: __dirname + '/frontend',
 
@@ -65,7 +67,7 @@ if (NODE_ENV == 'devser') {
     output: {
       path:     __dirname + '/public',
       publicPath: '/',  //   /js/app.js
-      filename: "[name][hash].js"
+      filename: "[name][chunkhash].js"
     },
 
     module: {
@@ -81,7 +83,7 @@ if (NODE_ENV == 'devser') {
         loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
       }, {
         test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-        loader: 'file?name=[path][name][hash].[ext]'
+        loader: 'file?name=[path][name][hash:6].[ext]'
       }]
     },
 
@@ -91,7 +93,7 @@ if (NODE_ENV == 'devser') {
           rimraf.sync(compiler.options.output.path);
         }
       },
-      new ExtractTextPlugin('[name][hash].css', {allChunks: true, disable: false}),
+      new ExtractTextPlugin('[name][contenthash].css', {allChunks: true, disable: false}),
       new webpack.NoErrorsPlugin(),
       new assetsPlugin ({
         filename: 'assets.json',
@@ -100,15 +102,26 @@ if (NODE_ENV == 'devser') {
       new HtmlWebpackPlugin({title: titleHTML}),
     ],
   };
-};
-
-if(NODE_ARCH == 1){
-  console.log('!!!!!!WEBPACK - АРХИВАЦИЯ!!!!! ОТМЕНА - npm run devser ИЛИ npm run testser')
-  module.exports.plugins.push(
-    new CopyWebpackPlugin([// Copy directory contents to {output}/to/directory/
-        { from: __dirname + '/frontend', to: __dirname + '/old_frontend/'+ t +'/' }
-    ])
-  )
 }else{
-  console.log('!!!!!!WEBPACK - БЕЗ АРХИВАЦИИ!!!!!')
+  console.log('!!!!!!WEBPACK - АРХИВАЦИЯ и МИНИМИЗАЦИЯ !!!!! ОТМЕНА - npm run devser ИЛИ npm run testser');
+  module.exports = {
+    context: __dirname + '/frontend',
+
+    entry: {
+      app: './main'
+    },
+
+    output: {
+      path:     __dirname + '/public',
+      publicPath: '/',  //   /js/app.js
+      filename: "[name][hash].js"
+    },
+    plugins: [
+      // new UglifyJSPlugin(),
+      new CopyWebpackPlugin([
+        { from: __dirname + '/frontend', to: __dirname + '/frontend_archive/'+ t +'/' }
+      ])
+    ]
+  }
+  console.log('THE END');
 };

@@ -1,5 +1,5 @@
 .menu .title {
-  background-image: url(/menu/plus2a95646906435fee9421ab7e89c7be68.svg);
+  background-image: url(/menu/plus2a9564.svg);
   padding: 0 6px 0 16px;
   background-position: left 1px;
   background-repeat: no-repeat;
@@ -12,11 +12,11 @@
   margin: 0;
 }
 .menu .list a {
-  color: #f00;
+  color: #008000;
 }
 .menu.open .list {
   display: block;
 }
 .menu.open .title {
-  background-image: url(/menu/minus2dc8d1e0568e4f4e31a9caf42c2b4b14.svg);
+  background-image: url(/menu/minus2dc8d1.svg);
 }
