@@ -1,4 +1,5 @@
 node_modules/
+frontend_archive/
 *.log
 npm-debug.log*
 stats.json
