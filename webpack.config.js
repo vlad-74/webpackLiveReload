@@ -120,5 +120,4 @@ if (NODE_ENV == 'devser') {
       ])
     ]
   }
-  console.log('THE END');
 };
