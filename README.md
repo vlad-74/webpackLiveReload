@@ -6,11 +6,11 @@
 
 !!! ПРИ ВНЕСЕНИЕ ИЗМЕНЕНИЙ В JS ФАЙЛЫ - ПЕРЕЗАГРУЗИТЬ = npm run devser
 
-# !!!ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!!!
+# ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!
 
-# npm run devser       <br />-- http://localhost:8080/webpack-dev-server/
-# npm run testser      <br />-- http://127.0.0.1:3000/ 
-# npm run archive      <br />АРХИВАЦИЯ frontend В frontend_archive И МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
+# `npm run devser`       <br />http://localhost:8080/webpack-dev-server/
+# `npm run testser`      <br />http://127.0.0.1:3000/ 
+# `npm run archive`      <br />1. АРХИВАЦИЯ frontend В frontend_archive<br />2. МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
 
 scripts в package.json:<br />
 1. "error": "webpack --display-error-details",
