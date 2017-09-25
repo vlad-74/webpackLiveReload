@@ -8,9 +8,9 @@
 
 # ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!
 
-# `npm run devser`       <br />http://localhost:8080/webpack-dev-server/
-# - ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `npm run testser`      <br />http://127.0.0.1:3000/ 
-# `npm run archive`      <br />1. АРХИВАЦИЯ frontend В frontend_archive<br />2. МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
+# - ![#c5f015](https://placehold.it/15/c5f015/000000?text=ttttttt) `npm run devser`       <br />http://localhost:8080/webpack-dev-server/
+# - ![#c5f015](https://placehold.it/15/c5f015/000000?text=ttttttt) `npm run testser`      <br />http://127.0.0.1:3000/ 
+# - ![#c5f015](https://placehold.it/15/c5f015/000000?text=ttttttt) `npm run archive`      <br />1. АРХИВАЦИЯ frontend В frontend_archive<br />2. МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
 
 scripts в package.json:<br />
 1. "error": "webpack --display-error-details",
