@@ -8,10 +8,8 @@
 
 # ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!
 
-
-
-# <span style="color:green">npm run devser</span>      <br />http://localhost:8080/webpack-dev-server/
-# `npm run testser`      <br />http://127.0.0.1:3000/ 
+# `npm run devser`       <br />http://localhost:8080/webpack-dev-server/
+# ```npm run testser```      <br />http://127.0.0.1:3000/ 
 # `npm run archive`      <br />1. АРХИВАЦИЯ frontend В frontend_archive<br />2. МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
 
 scripts в package.json:<br />
