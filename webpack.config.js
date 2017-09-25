@@ -8,11 +8,9 @@ const assetsPlugin = require('assets-webpack-plugin');
 const rimraf = require('rimraf'); //УДАЛЯЕТ СТАРЫЕ JS ФАЙЛЫ ИЗ ПАПКИ
 //HtmlWebpackPlugin - СОЗДАЕТ ФАЙЛ /index.html С ОБНОВЛЕННЫМ ПОДКЛЮЧЕННЫМ ФАЙЛОМ app.js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');//КОПИРУЕТ ФАЙЛЫ 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");//СОЗДАЕТ CSS ФАЙЛ
 
 const titleHTML = 'ЗАГОЛОВОК';
-let t = Date.parse(new Date()); //milliseconds
 
 if (NODE_ENV == 'devser') {
   module.exports = {
@@ -78,7 +76,7 @@ if (NODE_ENV == 'devser') {
         loader: "jade"
       }, {
         test:   /\.styl$/,
-        loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
+        loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url'),
       }, {
         test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
         loader: 'file?name=[path][name][hash:6].[ext]'
@@ -100,24 +98,4 @@ if (NODE_ENV == 'devser') {
       new HtmlWebpackPlugin({title: titleHTML}),
     ],
   };
-}else{
-  console.log('!!!!!!WEBPACK - АРХИВАЦИЯ и МИНИМИЗАЦИЯ !!!!! ОТМЕНА - npm run devser ИЛИ npm run testser');
-  module.exports = {
-    context: __dirname + '/frontend',
-
-    entry: {
-      app: './main'
-    },
-
-    output: {
-      path:     __dirname + '/public',
-      publicPath: '/',  //   /js/app.js
-      filename: "[name][hash].js"
-    },
-    plugins: [
-      new CopyWebpackPlugin([
-        { from: __dirname + '/frontend', to: __dirname + '/frontend_archive/'+ t +'/' }
-      ])
-    ]
-  }
 };

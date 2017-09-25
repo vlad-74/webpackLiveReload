@@ -17,6 +17,7 @@ npm i :Импортировать необходимые модули.Завис
     "html-webpack-plugin": "^2.30.1",<br />
     "jade": "^1.11.0",<br />
     "jade-loader": "^0.7.1",<br />
+    "node-minify": "^2.3.0",<br />
     "node-static": "^0.7.7",<br />
     "rimraf": "^2.6.2",<br />
     "style-loader": "^0.13.0",<br />
@@ -28,8 +29,8 @@ npm i :Импортировать необходимые модули.Завис
 # !!!!!!!!!!ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!!!!!!!!!!
 
 # npm run devser       -- http://localhost:8080/webpack-dev-server/
-# npm run testser      -- http://127.0.0.1:3000/
-# npm run archive         -- http://127.0.0.1:3000/ + АРХИВАЦИЯ frontend В frontend_archive!!!
+# npm run testser      -- http://127.0.0.1:3000/ 
+# npm run archive      АРХИВАЦИЯ frontend В frontend_archive И МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
 
 scripts в package.json:<br />
 1. "error": "webpack --display-error-details",
@@ -39,7 +40,7 @@ scripts в package.json:<br />
 5. "timev": "webpack --profile --display-modules --display-reasons",
 6. "devser": "set NODE_ENV=devser&set NODE_ARCH=0&webpack-dev-server --inline --hot",
 7. "testser": "set NODE_ENV=testser&set NODE_ARCH=0&webpack&node server.js",
-8. "archive": "set NODE_ENV=archive&set NODE_ARCH=1&webpack&node server.js"
+8. "ar-mi": "node archive-mini.js"
 
 Плагины:
 1. NoErrorsPlugin – не добавляет в сборку файлы с ошибками
