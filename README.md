@@ -1,5 +1,34 @@
 # Webpack для SPA сайта :<br />
-npm i :Импортировать необходимые модули.Зависимости указаны в файле package.json
+1. npm i : Импортировать необходимые модули.Зависимости указаны в файле package.json
+2. создать папку **frontend_archive** (эта папка включена в .gitignore, поэтому не отражается на git)
+
+ЗАГОЛОВОК HTML СТРАНИЦЫ - const titleHTML = 'ЗАГОЛОВОК';
+
+!!! ПРИ ВНЕСЕНИЕ ИЗМЕНЕНИЙ В JS ФАЙЛЫ - ПЕРЕЗАГРУЗИТЬ = npm run devser
+
+# !!!ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!!!
+
+# npm run devser       <br />-- http://localhost:8080/webpack-dev-server/
+# npm run testser      <br />-- http://127.0.0.1:3000/ 
+# npm run archive      <br />АРХИВАЦИЯ frontend В frontend_archive И МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
+
+scripts в package.json:<br />
+1. "error": "webpack --display-error-details",
+2. "info": "webpack --display-modules",
+3. "infov": "webpack --display-modules –v",
+4. "time": "webpack --profile --display-modules",
+5. "timev": "webpack --profile --display-modules --display-reasons",
+6. "devser": "set NODE_ENV=devser&set NODE_ARCH=0&webpack-dev-server --inline --hot",
+7. "testser": "set NODE_ENV=testser&set NODE_ARCH=0&webpack&node server.js",
+8. "ar-mi": "node archive-mini.js"
+
+Плагины:
+1. NoErrorsPlugin – не добавляет в сборку файлы с ошибками
+2. rimraf - удаляет старые js файлы из папки
+3. assetsPlugin - СОЗДАЕТ ФАЙЛ assets.json С ИНФОРМАЦИЕЙ О СБОРКЕ (hesh)
+4. HtmlWebpackPlugin - создает index.html файл с подключенным внутри и обновленным app.[hash].js
+5. CopyWebpackPlugin - копирует файлы
+6. ExtractTextPlugin - создает CSS файл
 
 "dependencies": {<br />
     "assets-webpack-plugin": "^3.5.1",<br />
@@ -25,31 +54,3 @@ npm i :Импортировать необходимые модули.Завис
     "url-loader": "^0.5.6",<br />
     "webpack": "^1.12.2",<br />
     "webpack-dev-server": "^1.12.1"<br />
-
-# !!!!!!!!!!ЗАПУСКАТЬ ТОЛЬКО ЧЕРЕЗ npm run скрипт!!!!!!!!!!
-
-# npm run devser       -- http://localhost:8080/webpack-dev-server/
-# npm run testser      -- http://127.0.0.1:3000/ 
-# npm run archive      АРХИВАЦИЯ frontend В frontend_archive И МИНИМИЗАЦИЯ css & js ФАЙЛОВ!!!
-
-scripts в package.json:<br />
-1. "error": "webpack --display-error-details",
-2. "info": "webpack --display-modules",
-3. "infov": "webpack --display-modules –v",
-4. "time": "webpack --profile --display-modules",
-5. "timev": "webpack --profile --display-modules --display-reasons",
-6. "devser": "set NODE_ENV=devser&set NODE_ARCH=0&webpack-dev-server --inline --hot",
-7. "testser": "set NODE_ENV=testser&set NODE_ARCH=0&webpack&node server.js",
-8. "ar-mi": "node archive-mini.js"
-
-Плагины:
-1. NoErrorsPlugin – не добавляет в сборку файлы с ошибками
-2. rimraf - удаляет старые js файлы из папки
-3. assetsPlugin - СОЗДАЕТ ФАЙЛ assets.json С ИНФОРМАЦИЕЙ О СБОРКЕ (hesh)
-4. HtmlWebpackPlugin - создает index.html файл с подключенным внутри и обновленным app.[hash].js
-5. CopyWebpackPlugin - копирует файлы
-6. ExtractTextPlugin - создает CSS файл
-
-!!! ПРИ ВНЕСЕНИЕ ИЗМЕНЕНИЙ В JS ФАЙЛЫ - ПЕРЕЗАГРУЗИТЬ = npm run devser
-
-ЗАГОЛОВОК HTML СТРАНИЦЫ - const titleHTML = 'ЗАГОЛОВОК';
