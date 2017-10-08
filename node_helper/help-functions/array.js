@@ -1,4 +1,4 @@
-function dynamicSortMultiple() {
+function gl_dynamicSortMultiple() {
     var props=[];
     /*Let's separate property name from ascendant or descendant keyword*/
     for(var i=0; i < arguments.length; i++){
@@ -27,6 +27,6 @@ function dynamicSort(property, isAscDesc) {
     }
 }
 
-console.log("Контекст из array-functions.js!!!");
+global.gl_dynamicSortMultiple = gl_dynamicSortMultiple;
 
-global.dynamicSortMultiple = dynamicSortMultiple;
+process.stdout.write('КОНТЕНТ ИЗ help-functions/array |');

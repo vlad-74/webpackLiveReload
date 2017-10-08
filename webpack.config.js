@@ -40,7 +40,8 @@ if (NODE_ENV == 'devser') {
       }, {
         test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
         loader: 'file?name=[path][name].[ext]?[hash]'
-      }]
+      }],
+      // noParse:  wrapRegexp(/\/node_modules\/(angular\/angular)/, 'noParse')
     },
 
     plugins: [
