@@ -1,6 +1,7 @@
 # Webpack для SPA сайта :<br />
 1. npm i : Импортировать необходимые модули.Зависимости указаны в файле package.json
 2. создать папку **frontend_archive** (эта папка включена в .gitignore, поэтому не отражается на git)
+3. В package.json включена библиотека [help-functions](https://www.npmjs.com/package/help-functions)
 
 ЗАГОЛОВОК HTML СТРАНИЦЫ - const titleHTML = 'ЗАГОЛОВОК';
 
@@ -43,6 +44,7 @@ scripts в package.json:<br />
     "css-loader": "^0.21.0",<br />
     "extract-text-webpack-plugin": "^0.8.2",<br />
     "file-loader": "^0.8.4",<br />
+    "help-functions": "^1.0.23",<br />
     "html-webpack-plugin": "^2.30.1",<br />
     "jade": "^1.11.0",<br />
     "jade-loader": "^0.7.1",<br />
